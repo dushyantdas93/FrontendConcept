@@ -5,8 +5,8 @@ const Acordian = () => {
   return (
     <>
     <Sidebar/>
-      <div className='          '>
-        s
+      <div className='h'>
+        
     </div>
     </>
   )

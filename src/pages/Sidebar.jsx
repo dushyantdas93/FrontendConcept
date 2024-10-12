@@ -10,6 +10,9 @@ const Sidebar = () => {
       <button>
         <Link to={"/crud"}> crud</Link>
       </button>
+      <button>
+        <Link to={"/crousel"}> crousel</Link>
+      </button>
 
       <button>
         <Link to={"/acordian"}> acordian</Link>

@@ -29,7 +29,7 @@ console.log(editUser)
   return (
     <>
       <Sidebar />
-      <h1 className="text-4xl">Crud app</h1>
+      <h1 className="text-4xl font-semibold">Crud app</h1>
 
       <form onSubmit={handleSubmit} >
         <input type="text" name='name' value={user.name}  placeholder="Enter Your name" onChange={handleChange} />

@@ -10,6 +10,7 @@ import SelectCountry from "./pages/SelectCountry";
 import SidebarNavigation from "./pages/SidebarNavigation";
 import TabSwitching from "./pages/TabSwitching";
 import Dashboard from "./pages/Dashboard";
+import Crousel from "./pages/Crousel"
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/crousel" element={<Crousel />} />
         <Route path="/crud" element={<Crud />} />
         <Route path="/acordian" element={<Acordian />} />
         <Route path="/adminDashboard" element={<AdminDashboard />} />
