@@ -15,18 +15,22 @@ const Crousel = () => {
   console.log(page)
   return (
     <>
-      <Sidebar/>
-      <div>
+      
+      <div className='w-full  flex justify-center item-center gap-10 relative'>
         {arr1.map((item, idx) => page == idx 
 
         
            
         )}
 
-       <button onClick={()=>setpage(page-1)}>pre</button> <img src={arr1[0]} alt="" /> <button onClick={()=>setpage(page+1)}>nest</button>
+       <button onClick={()=>setpage(page-1)} className=' absolute top-72 left-56 border px-5 rounded-lg bg-gray-300 font-semibold text-gray-700 py-1'>pre</button>
+        <div className="py-32">
+        <img src={arr1[0]} alt="" className='rounded-xl' />
+        </div>
+        <button className=' absolute top-72 right-56 border px-5 rounded-lg bg-gray-300 text-gray-700 py-1 font-semibold' onClick={()=>setpage(page+1)}>nest</button>
         
        
-        
+         
 
     </div>
     </>
