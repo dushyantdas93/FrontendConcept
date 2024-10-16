@@ -28,7 +28,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/crousel" element={<Crousel />} />
         <Route path="/crud" element={<Crud menubar={menubar}/>} />
-        <Route path="/acordian" element={<Acordian />} />
+        <Route path="/acordian" element={<Acordian menubar={menubar}/>} />
         <Route path="/adminDashboard" element={<AdminDashboard />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/infiniteScrolling" element={<InfiniteScrolling />} />
