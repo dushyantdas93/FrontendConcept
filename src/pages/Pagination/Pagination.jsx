@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Sidebar from './Sidebar.jsx'
+
 
 const Pagination = () => {
 
@@ -45,7 +45,7 @@ const Pagination = () => {
       </div>
      {products.length > 0 &&  <div className="   right-48 w-4/6 h-10  border  rounded-xl flex justify-between  items-center overflow-hidden">
       <button className='border-r p-2 bg-blue-200 ' onClick={()=>handlepage(page-1)}>pre</button>
-      {[...Array(totalpages)].map((_,id) => (<span className='cursor-pointer' onClick={()=>setpage(id+1 )}>{id+1}</span>))}
+      {[...Array(totalpages)].map((_,id) => (<span className='cursor-pointer' onClick={()=>setpage(id+1 )}>{id}</span>))}
       <button className='border-l p-2 bg-blue-200 ' onClick={()=>handlepage(page+1)}>nest</button>
       
       </div>}
