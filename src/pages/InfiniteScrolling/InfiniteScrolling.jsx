@@ -6,18 +6,15 @@ const InfiniteScrolling = () => {
   const [page, setpage] = useState(1);
   const [totalpages, setTotalpages] = useState(0);
 
-  const handelScroll =  () =>{
-    console.log(document.documentElement.scrollHeight)
-  }
   
 
   const productsFetch = async () => {
     const res = await fetch(
-      `https://dummyjson.com/products?limit=15&skip=${page * 15 - 15}`
+      `https://dummyjson.com/products?limit=15&skip=${page }`
     );
     const data = await res.json();
     if (data && data.products) {
-      setProducts(data.products);
+      setProducts((prev)=>[...prev,...data.products]);
       setTotalpages(data.total);
     }
     // console.log(totalpages / 10);
@@ -26,22 +23,43 @@ const InfiniteScrolling = () => {
 
   useEffect(() => {
     productsFetch();
+    
+ 
   }, [page]);
 
+   const handleScroll = async () => {
+     console.log("hello");
+
+     console.log(
+       document.documentElement.scrollHeight,
+       document.documentElement.scrollTop,
+       window.innerHeight
+     );
+     try {
+       if (document.documentElement.scrollHeight < document.documentElement.scrollTop + window.innerHeight + 1) {
+         setpage(page+1)
+       }
+      
+     } catch (error) {
+       console.log(error)
+      
+     }
+   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handelScroll)
    
-  
-  }, [])
+    window.addEventListener("click", handleScroll)
+    return () => window.removeEventListener("click", handleScroll);
+    
+  },[page]) 
+
+
   
   return (
     <>
       <div className="overflow-y-auto w-full relative">
         <div
-          className={`bg-gray-400 text-center py-2 capitalize fixed top-0 w-full ${
-            menubar ? " lg:w-5/6 " : " lg:w-full "
-          }  px-6`}
+          className={`bg-gray-400 text-center py-2 capitalize fixed top-0 w-full  px-6`}
         >
           <h1 className="text-4xl font-semibold text-red-800 ">Infinite Scrolling
           </h1>
