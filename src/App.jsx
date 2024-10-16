@@ -4,7 +4,7 @@ import Crud from "./pages/Crud/Crud.jsx";
 import Home from "./pages/Home";
 import Acordian from "./pages/Acordian/Acordian.jsx";
 import AdminDashboard from "./pages/AdminDashboard";
-import InfiniteScrolling from "./pages/InfiniteScrolling";
+import InfiniteScrolling from "./pages/InfiniteScrolling/InfiniteScrolling.jsx";
 import Pagination from "./pages/Pagination/Pagination.jsx";
 import SelectCountry from "./pages/SelectCountry";
 import SidebarNavigation from "./pages/SidebarNavigation";

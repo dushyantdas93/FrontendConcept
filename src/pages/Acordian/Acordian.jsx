@@ -19,7 +19,7 @@ const Acordian = ({menubar}) => {
             <h1 className="text-4xl font-semibold text-red-800 ">accordian</h1>
             <p>w</p>
           </div>
-          <div className="w-full h-screen flex p-20 gap-4 flex-wrap ">
+          <div className="w-full h-screen flex flex-col items-center  p-20 gap-4">
             {[1, 1, 1, 1, 1, 1, 1].map((item, idx) => {
               return <Component item={item} className={""} />;
            })}

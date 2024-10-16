@@ -13,8 +13,12 @@ const Crousel = () => {
   ];
 
   const [slide, setslide] = useState(0);
-  console.log(slide)
- 
+  console.log(slide);
+
+  setTimeout(() => {
+    setslide(slide === arr1.length - 1 ? 0 : slide + 1);
+  }, 10000);
+
   return (
     <>
       <div className="w-full   flex justify-center items-center relative">
@@ -22,9 +26,7 @@ const Crousel = () => {
           className={`bg-gray-400 text-center py-2 capitalize fixed top-0 w-full 
              px-6`}
         >
-         
           <h1 className="text-4xl font-semibold text-red-800">Carousel</h1>
-          
         </div>
 
         <Button
